@@ -1,0 +1,182 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #fa3030, #9c35d8, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+
+  #navbar {
+    background-color: rgb(46,113,255);
+    box-shadow: 0 0 25px 0 black;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  #navbar li {
+    text-align: center;
+  }
+
+  #navbar a {
+    text-decoration: none;
+    background-color: rgb(46,113,255);
+    color: black;
+    /* display: block; */
+    padding: 10px;
+  }
+  
+  #navbar a:hover {
+    background-color: rgb(0,80,250);
+    color: black;
+  }
+
+  #navbar .title {
+    font-weight: bold;
+  }
+
+  #navbar .title:hover {
+    background-color: rgb(46,113,255);
+    color: black;
+  }
+
+  #navbar a:active {
+    background-color: rgb(0,56,174);
+    color: black;
+  }
+  
+  @media(min-width:500px) {
+    
+    /* Navbar Styling */
+    
+    #navbar ul {
+      /* I use a 1fr column here to separate the home link from the rest of the links */
+      grid-template-columns: 100px 1fr repeat(3, 100px);
+      grid-template-rows: repeat(1, 1fr);
+    }
+    
+    .navhome {
+      grid-column: 1/2;
+    }
+
+    .title {
+      grid-column: 2/5;
+    }
+    
+    .navcredits {
+      grid-column: 5/6;
+    }
+
+    .title:hover {
+      background-color: #fff;
+    }
+
+    .taille {
+      height: 26px;
+    }
+  }
+
+.form{
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 100px auto 100px;
+  right: 60px;
+  padding: 45px;
+  text-align: center;
+}
+
+.theme1, .theme2, .theme3, .theme4, .theme5, .theme6 {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 100px auto 100px;
+  padding: 10px;
+  text-align: center;
+
+}
+
+
+.consigne2 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  top: 50px;
+  width: 300px;
+
+  /*Center position*/
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  text-align: center;
+  
+  /*Font*/
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*Consigne2 animation*/
+h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 30px;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

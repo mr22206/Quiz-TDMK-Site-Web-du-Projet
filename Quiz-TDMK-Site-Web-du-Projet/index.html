@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz-Login</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.18.0/full/pyodide.js"></script>
+</head>
+
+<body>
+    <div class="loader" id="js-loader">
+        <img src="loader.gif">
+        <p>Chargement ...</p>
+    </div>    
+
+    <form id="js-conversion-form" class="form hidden">
+        <div class="general">
+            <main role="main" class="main">
+                <div class="div1">
+                    <p class="title">✨ Quiz ✨</p>
+                    <input type="text" id="time" class="inp" placeholder="Ex: Matthieu ou Lea" required/> 
+                </div>
+
+                <div class="div3">
+                    <button type="submit" class="but">Jouer</button>
+                </div>
+
+                <p class="cons">Veuillez entrez votre prénom en minuscule.</p>
+                    
+                </div>
+            </main>
+        </div>  
+    </form>
+    
+    <script>
+        async function main() {
+            const pyodide = await loadPyodide({
+              indexURL : "https://cdn.jsdelivr.net/pyodide/v0.18.0/full/"
+            });
+
+            pyodide.runPython(`
+                import time 
+                import urllib
+                import webbrowser
+                themes=["Dylan","Theo","Mohammad","Kevin","Matthieu","Noah","Reese","Maksim","Charles","Myriam","Michael","Djibril","Matthias","Enola","Tom","Ali","html"]    ### liste des eleves de la classe.
+
+                themes1=["Tom"]                                                                                                                                               ### liste des eleves de la classe.
+                themes2=["Maksim","Charles","Ali","Myriam","Noah"]                                                                                                            ### liste des eleves de la classe.
+                themes3=["Kevin","Theo"]                                                                                                                                      ### liste des eleves de la classe. 
+                themes4=["Dylan","Michael","Mohammad","Reese","Djibril","Matthieu"]                                                                                           ### liste des eleves de la classe.
+                themes5=["Matthias"]                                                                                                                                          ### liste des eleves de la classe.
+                themes6=["Enola"]                                                                                                                                             ### liste des eleves de la classe.
+                ee1=["html"]                                                                                                                                                  ### liste des eleves de la classe.
+                themes7=["TDMK"]                                                                                                                                              ### liste des eleves de la classe.
+                            
+                def convert_time_in_seconds(time_string) :
+
+                    for i in themes1:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme1_sport/theme/review/index.html')                                                          ###ouverture de la page en question.
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes2:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme2_cinema/theme/review/index.html')                                                         ###ouverture de la page en question.   
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes3:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme3_jeuxvideos/theme/review/index.html')                                                     ###ouverture de la page en question.    
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes4:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme4_nourritures/theme/review/index.html')                                                    ###ouverture de la page en question.    
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes5:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme5_automobiles/theme/review/index.html')                                                    ###ouverture de la page en question.   
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes6:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme6_musique/theme/review/index.html')                                                        ###ouverture de la page en question.    
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+                    for i in themes7:                                                                                                               ###comparaison entre l'entré de l'utilisateur et les listes.                                                                                    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/theme7_projet/theme/review/index.html')                                                         ###ouverture de la page en question.                            
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.
+
+
+
+                    for i in ee1:                                                                                                                   ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string ==i:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('themes/ee/ee1.html')                                                                                   ###ouverture de la page en question.  
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.                                                     
+                            
+                    for i in themes:                                                                                                                   ###comparaison entre l'entré de l'utilisateur et les listes.    
+                        if time_string not in themes:                                                                                                         ### condition si entrée egal au nom de la liste.
+                            webbrowser.open('play.html')                                                                                   ###ouverture de la page en question.  
+                            return f'{time_string }'                                                                                                ### recuperation de la valeurs si condition valide.                                                     
+
+                                                                                                               
+            `);
+
+            const conversionForm = document.getElementById('js-conversion-form');       //recuperation du formulaire ayant comme id ().
+
+            document.getElementById('js-loader').classList.add('hidden');               // remplacez le formulaire temps qu'il n'est pas pret a l'aide du module hiden.
+            conversionForm.classList.remove('hidden');
+
+
+            conversionForm.addEventListener('submit', (e) => {                          //recuperation de la valeurs et passage dans le programme python et execution.
+                e.preventDefault();
+
+                const time = conversionForm.querySelector('input').value;
+
+
+                pyodide.runPython(`convert_time_in_seconds('${time}')`);
+            });
+        }
+        
+        main();
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(-45deg, #fa3030, #9c35d8, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.loader {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin: 300px auto 0 auto;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    width: 447px;
+    height: 332px;
+    top: 100px;
+    margin: 0 auto 100%;
+    padding: 45px;
+    text-align: center;
+    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.inp {
+    outline: 0;
+    background: #f2f2f2;
+    width: 360px;
+    height: 50px;
+    border: 0;
+    margin: 20px 0 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.but {
+    outline: 0;
+    background: rgb(46,113,255);
+    width: 360px;
+    height: 50px;
+    border: 0;
+    margin: 0 0 15px;
+    box-sizing: border-box;
+    font-size: 17px;
+    
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.but:hover,.but:active {
+    background: rgb(0,80,250);
+}
+
+.cons {
+    top: 10px;
+    margin: 10px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shadow-drop-center {
+    0% {
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+                box-shadow: 0 0 100px 0px rgba(0, 0, 0, 0.35);
+    }
+}
