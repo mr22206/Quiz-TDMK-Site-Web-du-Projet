@@ -29,19 +29,23 @@ Le projet a pour but de créer une interface fonctionnelle où les utilisateurs 
 
 ### 1. **Quiz thématique**
 Le site propose un quiz divisé en plusieurs thèmes, avec des questions générées dynamiquement à partir d'un script Python.
-- 💡 **Illustration suggérée** : Capture d'écran de la page principale avec la sélection des thèmes.
+
+![image](https://github.com/user-attachments/assets/5ee72436-1eef-482e-81d8-a8205026fcfa)
 
 ### 2. **Système de sondage**
 Un sondage initial permet d’adapter le quiz en fonction des préférences des utilisateurs.
-- 💡 **Illustration suggérée** : Capture d'écran du sondage avant le début du quiz.
+
+![image](https://github.com/user-attachments/assets/f4b8420b-e7a1-49b9-9a97-cc425aea8c19)
 
 ### 3. **Publication en ligne**
 Le quiz est publié en ligne et accessible via un lien public pour que tout utilisateur puisse y participer à tout moment.
-- 💡 **Illustration suggérée** : QR code pour accéder au quiz et lien vers la version en ligne.
+
+[Quiz TDMK - Site Web du Projet](https://mr22206.github.io/Quiz-TDMK-Site-Web-du-Projet/)
 
 ### 4. **Technologies avancées**
 Utilisation de WebAssembly pour améliorer les performances du quiz, notamment dans l'interaction entre JavaScript et Python.
-- 💡 **Illustration suggérée** : Schéma montrant l'intégration WebAssembly avec JavaScript et Python.
+
+![image](https://github.com/user-attachments/assets/c786d79a-ced5-48aa-9341-6ebc300c9510)
 
 ---
 
