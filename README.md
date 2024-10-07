@@ -91,8 +91,8 @@ Utilisation de WebAssembly pour améliorer les performances du quiz, notamment d
 
 ## Contact
 Si vous avez des questions ou souhaitez collaborer sur le projet, n'hésitez pas à nous contacter :
-- **Téléphone** : 06#######
-- **E-mail** : projet.tdmk@gmail.com
+- **Téléphone** : ** ** ** ** **
+- **E-mail** : projet.general.222@gmail.com
 
 ---
 
